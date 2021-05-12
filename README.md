@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+## Cameo Clone Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Its a No Backend Web Application. \
+In this project i cloned cameo.com Landing and Login pages.\
+For this i used ReactJS framework, styled-components, antd, craco, react-responsive and polished packages.\
+
+
 
 ## Available Scripts
 
