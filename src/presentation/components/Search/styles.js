@@ -8,7 +8,7 @@ export const Input = styled.input`
     height: 35px;
     font-size: 15px;
     border: 0;
-    width: 24rem;
+    width: 100%;
     line-height: 3rem;
     @media (max-width: 767px) {
         width: 11rem;
@@ -36,6 +36,7 @@ export const Container = styled.div`
     border-radius: 8rem;
     background-color: rgb(37, 37, 37);
     position: relative;
+    width: 50%;
     margin: 0.5rem 0.4rem 0.6rem 0;
     @media (max-width: 767px) {
         margin: 0.5rem 0.7rem 0.6rem 0;
