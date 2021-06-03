@@ -31,12 +31,12 @@ export const Button = styled.button`
 
 export const Container = styled.div`
     display: flex;
-    height: 2rem;
+    height: 2.6rem;
     align-items: center;
     border-radius: 8rem;
     background-color: rgb(37, 37, 37);
     position: relative;
-    width: 50%;
+    width: 60%;
     margin: 0.5rem 0.4rem 0.6rem 0;
     @media (max-width: 767px) {
         margin: 0.5rem 0.7rem 0.6rem 0;

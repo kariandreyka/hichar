@@ -18,11 +18,11 @@ export const Link = styled.a`
     text-decoration: none;
     background-color: rgb(0 0 0 / 0%);
     color: rgb(255, 255, 255);
-    font-size: 0.84rem;
+    font-size: 1rem;
     font-weight: 400;
     letter-spacing: -0.01rem;
     line-height: 1.5rem;
-    padding: 0.35rem 0.8rem;
+    padding: 0.7rem 1rem;
     border-radius: 0.35rem;
     &:hover {
         color: #fff;

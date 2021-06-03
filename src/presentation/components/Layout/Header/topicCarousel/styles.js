@@ -4,8 +4,8 @@ import { Row, Col } from 'antd';
 export const Container = styled(Row)`
     -webkit-box-align: center;
     align-items: center;
-    padding-left: 0.8rem;
-    padding-top: 0.3rem;
+    padding-left: 1rem;
+    padding-top: 0.7rem;
     padding-bottom: 1rem;
     flex-wrap: nowrap;
     overflow-x: auto;

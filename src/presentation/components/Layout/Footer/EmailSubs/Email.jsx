@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Input, Alert } from 'antd';
-import { Container, Section, EmailInput, Description, Title, ButtonEl, FormEl, Link } from './styles';
+import { Container, Section, EmailInput, Description, ButtonEl, FormEl, Link } from './styles';
+import { Tittle, Text } from '../../../Typography/styles';
 
 const validateMessages = {
     required: 'not valid',
@@ -30,8 +31,12 @@ const Email = () => {
     return (
         <Container>
             <Section>
-                <Title>Join our mailing list</Title>
-                <Description>Be the first to know about the newest stars and best deals on Cameo</Description>
+                <Tittle family="secondary" weight="bold">
+                    Join our mailing list
+                </Tittle>
+                <Description family="secondary" weight="light">
+                    Be the first to know about the newest stars and best deals on Cameo
+                </Description>
             </Section>
             <Section>
                 <FormEl form={form} onFinish={onFinish} validateMessages={validateMessages}>
@@ -59,9 +64,15 @@ const Email = () => {
             </Section>
             <Section>{isSubscribed && <Message />} </Section>
             <Section>
-                <span style={{ color: 'rgb(173, 174, 181)', fontSize: '12px' }}>
-                    Emails subject to <Link href="#">privacy policy</Link>{' '}
-                </span>
+                <Text size="description" color="grey">
+                    Emails subject to
+                    <Link href="#">
+                        <Text color="grey" weight="extraBold">
+                            {' '}
+                            privacy policy
+                        </Text>
+                    </Link>
+                </Text>
             </Section>
         </Container>
     );

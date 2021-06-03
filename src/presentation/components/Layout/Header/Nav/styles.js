@@ -12,6 +12,7 @@ export const LoginModal = styled(Modal)`
 export const Column = styled(Col)`
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 `;
 
 export const Link = styled.a`

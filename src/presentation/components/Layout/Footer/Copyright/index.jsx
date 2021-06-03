@@ -1,11 +1,14 @@
 import React from 'react';
-import { Row, Col } from 'antd';
-import { Title, Container } from './styles';
+import { Col } from 'antd';
+import { Container } from './styles';
+import { Text } from '../../../Typography/styles';
 
 const Copyright = () => (
     <Container>
         <Col>
-            <Title>© 2017-2021, Baron App, Inc. dba Cameo</Title>
+            <Text color="grey" size="description">
+                © 2017-2021, Baron App, Inc. dba Cameo
+            </Text>
         </Col>
     </Container>
 );

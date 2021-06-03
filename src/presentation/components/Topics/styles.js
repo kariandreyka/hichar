@@ -3,7 +3,7 @@ import { Row, Col } from 'antd';
 
 export const TopicBar = styled.a`
     font-family: 'cerebri', 'sans-serif';
-    font-size: 13px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 0.4rem;
     -webkit-box-align: center;
@@ -15,15 +15,15 @@ export const TopicBar = styled.a`
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
-    padding: 0rem 0.8rem;
+    padding: 0rem 0.9rem;
     text-align: center;
     text-decoration: none;
     transition: background-color 216ms ease-in-out 0s;
     white-space: nowrap;
     pointer-events: inherit;
-    margin-right: 0.8rem;
+    margin-right: 1rem;
     margin-bottom: ${({ sm }) => (sm ? '0.4rem' : '0rem')};
-    height: 2.1rem;
+    height: 2.6rem;
     &:hover {
         color: rgb(243, 244, 254);
         background-color: rgb(62, 62, 62);
@@ -37,7 +37,7 @@ export const Container = styled(Row)`
 
 export const Span = styled.span`
     font-family: cerebri, sans-serif;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 400;
     letter-spacing: -0.01rem;
     line-height: 0.5rem;

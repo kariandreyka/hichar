@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import { Row, Col, Layout, Form, Input, Button } from 'antd';
+import { Row, Col, Form, Input, Button } from 'antd';
+import { Text } from '../../../Typography/styles';
+import { FontTheme } from '../../../Typography/constants';
 
 export const Container = styled(Row)`
     display: flex;
@@ -29,17 +31,8 @@ export const EmailInput = styled(Input)`
     }
 `;
 
-export const Description = styled.span`
-    font-size: 12px;
+export const Description = styled(Text)`
     margin-bottom: 8px;
-    color: #fff;
-    font-family: 'cerebri', 'sans-serif';
-    font-weight: 400;
-`;
-
-export const Title = styled.h2`
-    font-size: 15px;
-    margin: 0;
 `;
 
 export const FormEl = styled(Form)`
@@ -71,11 +64,10 @@ export const ButtonEl = styled(Button)`
 `;
 
 export const Link = styled.a`
-    font-weight: 600;
-    font-size: 13px;
-    text-decoration: none;
-    color: rgb(173, 174, 181);
-    &:hover {
+    padding-left: 1px;
+
+    &:hover span {
         text-decoration: underline;
+        color: ${FontTheme.Color.lightGrayishBlue} !important;
     }
 `;

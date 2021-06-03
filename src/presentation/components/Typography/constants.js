@@ -1,19 +1,15 @@
 export const FontTheme = {
     Family: {
-        primary: 'Overpass',
+        primary: 'cerebri',
         secondary: 'Ubuntu',
     },
     Color: {
-        black: '#535353',
-        darkBlack: '#000000',
-        smoke: '#837F7F',
-        white: '#ffffff',
-        red: 'hsl(356, 100%, 66%)',
-        lightRed: 'hsl(355, 100%, 74%)',
-        darkBlue: 'hsl(208, 49%, 24%)',
-        grayishBlue: 'hsl(207, 13%, 34%)',
-        lightGrayishBlue: 'hsl(240, 2%, 79%)',
-        darkBlackBlue: 'hsl(240, 10%, 16%)',
+        smoke: 'rgb(37,37,37)',
+        grey: 'rgb(173,174,181)',
+        darkBlack: 'rgb(16, 16, 16)',
+        white: 'rgb(255, 255,255)',
+        lightGrayishBlue: 'rgb(69, 255, 255)',
+        lightPink: 'rgb(255,3,124)',
     },
     Weight: {
         light: '300',
@@ -24,15 +20,11 @@ export const FontTheme = {
         extraBold: '800',
     },
     Size: {
-        tiny: '12px',
-        regular: '16px',
-        nobleRegular: '18px',
+        tiny: '13px',
+        regular: '1rem',
         description: '14px',
-        title: '24px',
-        bigTitle: '45px',
-        motto: '70px',
-        mobileMotto: '36px',
-        mobileBigTitle: '32px',
+        title: '1.5rem',
+        bigTitle: '2rem',
     },
 
     Style: {
