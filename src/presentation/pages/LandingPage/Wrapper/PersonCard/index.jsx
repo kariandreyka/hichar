@@ -1,18 +1,30 @@
 import React, { useState } from 'react';
 import { Row, Col } from 'antd';
-import { Container, Span, Svg, Mark, Column, Adverb, Card, Image, Info, Link, ImgDiv, Title, Subtitle, Tab, Price } from './styles';
+import { useSelector } from 'react-redux';
+import { Container, Span, Svg, Mark, Column, Adverb, Card, Image, Info, Link, ImgDiv, Tab } from './styles';
 import userMediaQuery from '../../../../../utils/Hooks/userMediaQuery';
 import LoginModal from '../../../../components/LoginModal/index';
+import { Text } from '../../../../components/Typography/styles';
 
 const PersonCard = (props) => {
     const { xs, sm, lg, md, xl } = userMediaQuery();
     const [visible, setVisible] = useState(false);
     const [isMouseOn, setMouseOn] = useState(false);
+    const [isModelOrMark, setModalOrMark] = useState(false);
     const { data } = props;
+    const userInfo = useSelector((state) => state.userInfo);
 
     const handleCancel = () => {
         console.log('Clicked cancel button');
         setVisible(false);
+    };
+
+    const markClickHandler = () => {
+        if (!userInfo) {
+            setVisible(true);
+        } else {
+            setModalOrMark(!isModelOrMark);
+        }
     };
 
     const mouseEnter = () => {
@@ -23,14 +35,14 @@ const PersonCard = (props) => {
     };
 
     const BookMark = () => (
-        <Mark onClick={() => setVisible(true)}>
-            <Row style={{ width: '1.2rem', height: '1.2rem', backgroundColor: 'rgb(28, 28, 28)', alignItems: 'center', justifyContent: 'center' }}>
+        <Mark onClick={markClickHandler}>
+            <Row style={{ width: '1.4rem', height: '1.4rem', backgroundColor: 'rgb(28, 28, 28)', alignItems: 'center', justifyContent: 'center' }}>
                 <Svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="14"
+                    height="14"
                     viewBox="0 0 24 24"
-                    fill="none"
+                    fill={isModelOrMark ? 'rgb(69, 255, 255)' : 'none'}
                     stroke="currentColor"
                     strokeWidth="2"
                     strokeLinecap="round"
@@ -54,11 +66,13 @@ const PersonCard = (props) => {
                         {data.charity && (
                             <Span>
                                 <img
-                                    style={{ height: '.6rem', marginRight: '2px' }}
+                                    style={{ height: '.8rem', marginRight: '2px' }}
                                     src="https://cdn.cameo.com/static/assets/icons/group28x28.svg"
                                     alt=""
                                 />
-                                <span>Charity</span>
+                                <Text size="tiny" weight="medium">
+                                    Charity
+                                </Text>
                             </Span>
                         )}
                     </Adverb>
@@ -69,10 +83,14 @@ const PersonCard = (props) => {
                         <Link href="#">
                             <Row style={{ display: 'flex', flexDirection: 'column' }}>
                                 <Col>
-                                    <Title>{data.name}</Title>
+                                    <Text weight="extraBold" family="secondary">
+                                        {data.name}
+                                    </Text>
                                 </Col>
                                 <Column>
-                                    <Subtitle>{data.title}</Subtitle>
+                                    <Text family="secondary" color="grey" size="tiny">
+                                        {data.title}
+                                    </Text>
                                 </Column>
                             </Row>
                         </Link>
@@ -80,12 +98,18 @@ const PersonCard = (props) => {
                 </Row>
                 <Tab>
                     <Col>
-                        <span style={{ fontSize: '10px' }}>From</span>
-                        <Price>{data.price}</Price>
+                        <Text style={{ marginRight: '5px' }} size="tiny">
+                            From
+                        </Text>
+                        <Text size="description" weight="bold" family="secondary">
+                            {data.price}
+                        </Text>
                     </Col>
                     <Col>
-                        <img src="https://cdn.cameo.com/static/assets/icons/zap.svg" style={{ height: '.7rem', paddingRight: '3px' }} alt="" />
-                        <span style={{ fontWeight: '700', fontSize: '10.5px' }}>24hr</span>
+                        <img src="https://cdn.cameo.com/static/assets/icons/zap.svg" style={{ height: '.9rem', paddingRight: '3px' }} alt="" />
+                        <Text size="description" weight="bold" family="secondary">
+                            24hr
+                        </Text>
                     </Col>
                 </Tab>
             </Card>

@@ -1,10 +1,14 @@
 import React from 'react';
 import { Row, Form } from 'antd';
 import { useHistory, useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { SocialButton, Title, Desc, DescRow, Section, Text, InputItem, LogTitle, FormLog, Link } from './styles';
 import { AppleIcon } from '../../fonts/FontAwesome';
+import { setUserInfo } from '../../../../utils/Redux/Auth/action.js';
 
 const LoginForm = (props) => {
+    const dispatch = useDispatch();
+
     const location = useLocation();
     const [form] = Form.useForm();
     const history = useHistory();
@@ -21,9 +25,19 @@ const LoginForm = (props) => {
     };
 
     const onFinish = (values) => {
+        const obj = {
+            email: `${values.user.email}`,
+            password: `${values.password}`,
+        };
         console.log('Received values of form: ', values);
         form.resetFields();
         setTimeout(() => {
+            try {
+                dispatch(setUserInfo(obj));
+            } catch (err) {
+                console.log(err, 'err');
+            }
+
             if (location.pathname === '/login') {
                 history.goBack();
                 return;

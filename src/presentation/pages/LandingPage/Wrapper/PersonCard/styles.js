@@ -51,23 +51,6 @@ export const Link = styled.a`
     width: 100%;
 `;
 
-export const Title = styled.span`
-    font-size: 14px;
-    line-height: 10px;
-    font-weight: 700;
-    color: #fff;
-`;
-
-export const Subtitle = styled.span`
-    font-size: 11px;
-    font-weight: 400;
-    line-height: 18px;
-    width: 5px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    color: rgb(173, 174, 181);
-`;
 export const Column = styled(Col)`
     width: 150px;
     overflow: hidden;

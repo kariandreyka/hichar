@@ -33,7 +33,4 @@ export const Title = styled.span`
     position: absolute;
     top: 13%;
     left: 8%;
-    color: white;
-    font-weight: 700;
-    font-size: 13px;
 `;

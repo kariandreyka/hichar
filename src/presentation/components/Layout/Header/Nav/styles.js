@@ -36,7 +36,7 @@ export const Image = styled.a`
 
 export const Nav = styled(Header)`
     background-color: rgb(16, 16, 16);
-    padding: 5px 25px;
+    padding: 5px 10px;
     line-height: 44px;
     display: flex;
     width: 100%;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Image } from './styles';
 import useMediaQuery from '../../../../../utils/Hooks/userMediaQuery';
+import { Text, Tittle } from '../../../../components/Typography/styles';
 
 const ArticleCard = (props) => {
     const { data } = props;
@@ -11,10 +12,12 @@ const ArticleCard = (props) => {
                 <Image src={data.imgSource} alt="" />
             </a>
             <a href="">
-                <h1>{data.articleName}</h1>
+                <Tittle size="title" weight="bold" family="secondary">
+                    {data.articleName}
+                </Tittle>
             </a>
             <div>
-                <span>{data.articleAbstract}</span>
+                <Text family="secondary">{data.articleAbstract}</Text>
             </div>
         </Container>
     );

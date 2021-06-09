@@ -5,7 +5,8 @@ import Topic from './topicCarousel/Topic';
 import { Container } from './styles';
 import useMediaQuery from '../../../../utils/Hooks/userMediaQuery';
 
-const Header = () => {
+const Header = (props) => {
+    const { userInfo } = props;
     const location = useLocation();
     const locatPage = location.pathname;
 
@@ -19,7 +20,7 @@ const Header = () => {
 
     return (
         <Container>
-            <Navbar />
+            <Navbar userInfo={userInfo} />
             {!sm && isPageLanding() && <Topic />}
         </Container>
     );

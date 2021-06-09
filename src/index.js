@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ConfigProvider } from 'antd';
 import { Provider } from 'react-redux';
-import enGB from 'antd/lib/locale-provider/en_GB';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import store from './utils/Redux/store';
 // import store from './utils/Redux/store';
 
 // import { Provider } from "react-redux";
@@ -17,9 +16,9 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
     <React.StrictMode>
-        <ConfigProvider locale={enGB}>
+        <Provider store={store}>
             <App />
-        </ConfigProvider>
+        </Provider>
     </React.StrictMode>,
     document.getElementById('root')
 );
