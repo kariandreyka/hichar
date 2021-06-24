@@ -10,15 +10,12 @@ const LandingPage = () => {
         console.log('this is for branch testing');
     }
 
+
    const hadnleSomeShit = (params) => {
     console.log('this is for branch testinggg');
         
     }
 
-    const handleFalanFilan = () => {
-        console.log('fill');
-    }
-    
   
     return (
         <LandingPageStyles>
