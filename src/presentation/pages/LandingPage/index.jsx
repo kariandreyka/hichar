@@ -5,10 +5,21 @@ import WrapperContent from './Wrapper/Wrapper';
 
 const LandingPage = () => {
     const [state, setstate] = useState(0);
+
     const handleMyBranch = () => {
         console.log('this is for branch testing');
     }
 
+   const hadnleSomeShit = (params) => {
+    console.log('this is for branch testinggg');
+        
+    }
+
+    const handleFalanFilan = () => {
+        console.log('fill');
+    }
+    
+  
     return (
         <LandingPageStyles>
             <WrapperContent />
