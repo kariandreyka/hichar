@@ -9,11 +9,7 @@ const LandingPage = () => {
         console.log('this is for branch testing');
     }
 
-    const handleMyBranch = () => {
-        console.log('this is for branch testing');
-    }
-
-   const hadnleSomeShit = (params) => {
+      const hadnleSomeShit = (params) => {
     console.log('this is for branch testinggg');
         
     }
