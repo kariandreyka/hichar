@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Row, Col } from 'antd';
+import { Row } from 'antd';
 
 export const Container = styled(Row)`
     margin: 0 auto 35px auto;

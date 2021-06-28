@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Image } from './styles';
 import useMediaQuery from '../../../../../utils/Hooks/userMediaQuery';
 import { Text, Tittle } from '../../../../components/Typography/styles';
@@ -8,14 +9,14 @@ const ArticleCard = (props) => {
     const { sm } = useMediaQuery();
     return (
         <Container sm={sm}>
-            <a href="">
+            <Link>
                 <Image src={data.imgSource} alt="" />
-            </a>
-            <a href="">
+            </Link>
+            <Link>
                 <Tittle size="title" weight="bold" family="secondary">
                     {data.articleName}
                 </Tittle>
-            </a>
+            </Link>
             <div>
                 <Text family="secondary">{data.articleAbstract}</Text>
             </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Input, Alert } from 'antd';
+import { Form, Button, Alert } from 'antd';
 import { Container, Section, EmailInput, Description, ButtonEl, FormEl, Link } from './styles';
 import { Tittle, Text } from '../../../Typography/styles';
 
@@ -23,7 +23,6 @@ const Email = () => {
     const onFinish = (values) => {
         form.resetFields();
 
-        console.log(isSubscribed);
         setTimeout(() => {
             setSubcribe(values.user.email);
         }, 1000);
