@@ -1,31 +1,31 @@
-// module.exports = {
-//     extends: ['wesbos', 'plugin:sonarjs/recommended'],
+module.exports = {
+    extends: ['wesbos', 'plugin:sonarjs/recommended'],
 
-//     plugins: ['sonarjs'],
+    plugins: ['sonarjs'],
 
-//     rules: {
-//         'react/prop-types': 0,
-//         'import/no-named-as-default': 0,
-//         'import/no-extraneous-dependencies': 0,
-//         'no-console': 1,
-//         'react/jsx-props-no-spreading': 'off',
-//         'import/no-unresolved': [2, { caseSensitive: false }],
-//         'prettier/prettier': [
-//             2,
+    rules: {
+        'react/prop-types': 0,
+        'import/no-named-as-default': 0,
+        'import/no-extraneous-dependencies': 0,
+        'no-console': 1,
+        'react/jsx-props-no-spreading': 'off',
+        'import/no-unresolved': [2, { caseSensitive: false }],
+        'prettier/prettier': [
+            2,
 
-//             {
-//                 trailingComma: 'es5',
+            {
+                trailingComma: 'es5',
 
-//                 singleQuote: true,
+                singleQuote: true,
 
-//                 printWidth: 150,
+                printWidth: 150,
 
-//                 tabWidth: 4,
+                tabWidth: 4,
 
-//                 jsxBracketSameLine: true,
+                jsxBracketSameLine: true,
 
-//                 endOfLine: 'auto',
-//             },
-//         ],
-//     },
-// };
+                endOfLine: 'auto',
+            },
+        ],
+    },
+};
