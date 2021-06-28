@@ -9,11 +9,7 @@ const LandingPage = () => {
         console.log('this is for branch testing');
     }
 
-      const hadnleSomeShit = (params) => {
-    console.log('this is for branch testinggg');
-        
-    }
-  
+     
     return (
         <LandingPageStyles>
             <WrapperContent />
