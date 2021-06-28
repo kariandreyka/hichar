@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Row, Col } from 'antd';
+import { Row } from 'antd';
 import { between } from 'polished';
 
 export const Container = styled(Row)`

@@ -15,7 +15,6 @@ const PersonCard = (props) => {
     const userInfo = useSelector((state) => state.userInfo);
 
     const handleCancel = () => {
-        console.log('Clicked cancel button');
         setVisible(false);
     };
 

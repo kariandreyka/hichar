@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row } from 'antd';
+import Link from 'react-router-dom';
 import { Container, Section } from './styles';
 import CategoryCard from '../CategoryCard/index';
 import useMediaQuery from '../../../../../utils/Hooks/userMediaQuery';
@@ -12,9 +13,9 @@ const CategoryRow = (props) => {
 
     return (
         <Container>
-            <a href="#">
+            <Link>
                 <h1 style={{ color: 'white', fontWeight: '800', fontSize: '1.55rem', letterSpacing: '.8px' }}>{set}</h1>
-            </a>
+            </Link>
             <Row />
             <Section sm={sm} lg={lg} xl={xl}>
                 {xl && data.map((param) => <CategoryCard data={param} />)}
