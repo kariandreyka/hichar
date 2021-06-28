@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row } from 'antd';
-import Link from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Container, Section } from './styles';
 import CategoryCard from '../CategoryCard/index';
 import useMediaQuery from '../../../../../utils/Hooks/userMediaQuery';

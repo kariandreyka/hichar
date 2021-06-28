@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Container, Section, Image, Title } from './styles';
 import useMediaQuery from '../../../../../utils/Hooks/userMediaQuery';
 import { Text } from '../../../../components/Typography/styles';
