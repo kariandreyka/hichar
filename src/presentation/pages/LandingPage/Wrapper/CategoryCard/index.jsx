@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Section, Image, Title } from './styles';
 import useMediaQuery from '../../../../../utils/Hooks/userMediaQuery';
 import { Text } from '../../../../components/Typography/styles';
@@ -10,14 +11,14 @@ const CatCard = (props) => {
     return (
         <Container sm={sm} xl={xl} md={md}>
             <Section sm={sm}>
-                <a href="#">
+                <Link>
                     <Image src={data.imgSource} alt="" />
                     <Title>
                         <Text weight="bold" family="secondary">
                             {data.categoryName}
                         </Text>
                     </Title>
-                </a>
+                </Link>
             </Section>
         </Container>
     );

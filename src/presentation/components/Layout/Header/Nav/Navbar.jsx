@@ -12,14 +12,13 @@ const Navbar = (props) => {
     const { userInfo } = props;
     const history = useHistory();
     const handleCancel = () => {
-        console.log('Clicked cancel button');
         setVisible(false);
     };
 
-    const handleRouteLogin = (e) => {
+    const handleRouteLogin = () => {
         history.push('/login');
     };
-    const handleRouteLogo = (e) => {
+    const handleRouteLogo = () => {
         history.push('/');
     };
 

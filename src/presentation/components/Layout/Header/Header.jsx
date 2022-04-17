@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 import Navbar from './Nav/Navbar';
 import Topic from './topicCarousel/Topic';
 import { Container } from './styles';
