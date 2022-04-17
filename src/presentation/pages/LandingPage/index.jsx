@@ -8,15 +8,12 @@ const LandingPage = () => {
 
     const handleMyBranch = () => {
         console.log('this is for branch testing');
-    }
+    };
 
+    const hadnleSomeShit = (params) => {
+        console.log('this is for branch testinggg');
+    };
 
-   const hadnleSomeShit = (params) => {
-    console.log('this is for branch testinggg');
-        
-    }
-
-  
     return (
         <LandingPageStyles>
             <WrapperContent />
