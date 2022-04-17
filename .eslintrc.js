@@ -7,7 +7,8 @@ module.exports = {
         'react/prop-types': 0,
         'import/no-named-as-default': 0,
         'import/no-extraneous-dependencies': 0,
-        'no-console': 1,
+        'no-console': 0,
+        'no-unused-vars': 0,
         'react/jsx-props-no-spreading': 'off',
         'import/no-unresolved': [2, { caseSensitive: false }],
         'prettier/prettier': [
