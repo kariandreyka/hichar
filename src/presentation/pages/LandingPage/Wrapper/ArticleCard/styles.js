@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Row, Col } from 'antd';
+import { Col } from 'antd';
 
 export const Container = styled(Col)`
     display: flex;

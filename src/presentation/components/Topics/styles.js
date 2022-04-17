@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Row, Col } from 'antd';
+import { Row } from 'antd';
 
 export const TopicBar = styled.a`
     font-family: 'cerebri', 'sans-serif';

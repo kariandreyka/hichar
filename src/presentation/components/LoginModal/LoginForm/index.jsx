@@ -12,7 +12,6 @@ const LoginForm = (props) => {
     const location = useLocation();
     const [form] = Form.useForm();
     const history = useHistory();
-    console.log(location);
     const { setVisible } = props;
     const validateMessages = {
         required: 'is required!',
@@ -21,7 +20,7 @@ const LoginForm = (props) => {
         },
     };
     const onFinishFailed = (errorInfo) => {
-        console.log('Failed:', errorInfo);
+        throw new Error(errorInfo);
     };
 
     const onFinish = (values) => {
@@ -29,13 +28,12 @@ const LoginForm = (props) => {
             email: `${values.user.email}`,
             password: `${values.password}`,
         };
-        console.log('Received values of form: ', values);
         form.resetFields();
         setTimeout(() => {
             try {
                 dispatch(setUserInfo(obj));
             } catch (err) {
-                console.log(err, 'err');
+                throw new Error(err);
             }
 
             if (location.pathname === '/login') {
