@@ -4,7 +4,7 @@ import LoginForm from './LoginForm/index';
 import useMediaQuery from '../../../utils/Hooks/userMediaQuery';
 
 const Login = (props) => {
-    const { setVisible, visible, onCancel } = props;
+    const { setVisible } = props;
     const { xs, sm, md, lg, xl } = useMediaQuery();
     return (
         <LoginModal xs={xs} sm={sm} md={md} lg={lg} xl={xl} {...props}>

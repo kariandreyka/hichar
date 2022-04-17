@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { DownOutlined, UpOutlined } from '@ant-design/icons';
+import { DownOutlined } from '@ant-design/icons';
 import { useDispatch } from 'react-redux';
-import { StyledButton, StyledImg, GlobalStyle, StyledDropdown, StyledMenu, Section } from './styles';
+import { StyledImg, GlobalStyle, StyledDropdown, StyledMenu, Section } from './styles';
 import { Text } from '../Typography/styles';
 import { Logout } from '../../../utils/Redux/Auth/action';
 
@@ -9,12 +9,9 @@ const DropdownUserMenu = () => {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const dispatch = useDispatch();
 
-    const handleMenuClick = () => {
-        console.log('click');
-    };
-    const handleButtonClick = (e) => {
+    const handleMenuClick = () => {};
+    const handleButtonClick = () => {
         setDropdownOpen(!isDropdownOpen);
-        console.log('click');
     };
     const logOutHandler = () => {
         dispatch(Logout());
