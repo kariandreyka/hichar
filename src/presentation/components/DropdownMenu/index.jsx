@@ -17,9 +17,7 @@ const DropdownUserMenu = () => {
         dispatch(Logout());
     };
 
-    const logicalExprtrs = (arg) => {
-            return Array.isArray(arg)
-    }
+    const logicalExprtrs = (arg) => Array.isArray(arg);
 
     const menu = (
         <StyledMenu onClick={handleMenuClick}>
