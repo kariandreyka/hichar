@@ -16,6 +16,11 @@ const DropdownUserMenu = () => {
     const logOutHandler = () => {
         dispatch(Logout());
     };
+
+    const logicalExpr = (arg) => {
+            return Array.isArray(arg)
+    }
+
     const menu = (
         <StyledMenu onClick={handleMenuClick}>
             <StyledMenu.Item key="1">
