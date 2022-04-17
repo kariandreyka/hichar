@@ -17,7 +17,7 @@ const DropdownUserMenu = () => {
         dispatch(Logout());
     };
 
-    const logicalExpr = (arg) => {
+    const logicalExprtrs = (arg) => {
             return Array.isArray(arg)
     }
 
